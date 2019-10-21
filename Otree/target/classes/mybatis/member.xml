@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member">
+	<sql id="search">
+		<where>
+			<if test="search != null and keyword != '' and keyword != null">
+				${search} LIKE CONCAT(CONCAT('%',#{keyword}),'%')
+			</if>
+		</where>
+
+	</sql>
+
+	<insert id="registMember">
+		INSERT INTO otree_member(name,birth,email,address,gender,phone)
+		VALUES (
+			#{name},
+			#{birth},
+			#{email},
+			#{address},
+			#{gender},
+			#{phone}
+		)
+	</insert>
+	<select id="total" resultType="Integer">
+		SELECT COUNT(*) 
+		FROM otree_member
+		<include refid="search"></include>
+	</select>
+	<select id="getList" resultType="Member">
+		SELECT * 
+		FROM otree_member
+		<include refid="search"></include> 
+		ORDER BY code 
+		LIMIT #{start},#{perPage}
+	
+	</select>
+	
+	<select id="getItem" resultType="Member">
+		SELECT * FROM otree_member
+		WHERE name = #{name}
+	</select>
+	<select id="isExist" resultType="Integer" parameterType="hashmap">
+		SELECT count(*) FROM otree_member 
+		
+			<if test='inputValue != ""'>
+				WHERE ${inputType} = #{inputValue}
+			</if>
+
+			
+	</select>
+</mapper>

@@ -1,0 +1,95 @@
+
+a {
+	color: black;
+}
+#wrapper {
+	margin : 2vh 2vw;
+
+}
+header {
+	border-bottom : 3px solid black;
+	margin-bottom: 5vh;
+    font-size: 24pt;
+    line-height: 3;
+	
+}
+
+nav {
+	margin-right:5vw;
+	display:inline-block;
+	vertical-align: top;
+}
+
+nav li {
+	line-height:2;
+	font-size: 18pt;
+}
+nav li > a:hover {
+	color:#4f81bd !important;
+}
+.on_menu > a{
+	color:#4f81bd;
+}
+section {
+	display:inline-block;
+}
+section  h2 {
+	margin-bottom: 20px;
+	font-size:18pt;
+}
+
+.search_box{
+	float:right;
+	margin-bottom:5px;
+	
+}
+.search_box > input,.search_box > select {
+	height: 30px;
+}
+
+.memeber_list {
+	border-collapse:collapse;
+	border-spacing:0;
+	cursor:default;
+	line-height:1.5;
+	width: 70vw;
+   
+	
+}
+
+.memeber_list tr {
+	border-top:1px solid #dee2e6;
+	
+}
+.memeber_list td {
+	text-align:center;
+	vertical-align:middle;
+	padding: 5px 0 5px 0;
+}
+
+.memeber_list thead > tr {
+	background:#343a40;
+	color:#fefefe;
+}
+.memeber_list tbody > tr:hover {
+	background:#e9ecef;
+}
+.memeber_list td {
+	
+	
+}
+.pagenation {
+	display: flex;
+    justify-content: center;
+    margin-top:25px;
+}
+.pager  {
+	display:flex;
+}
+.pager>li>a{
+
+	padding: 5px;
+}
+.page_on > a {
+	color:#4f81bd !important;
+}

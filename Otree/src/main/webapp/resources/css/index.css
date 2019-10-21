@@ -1,0 +1,58 @@
+a {
+	color: black;
+}
+#wrapper {
+	margin : 2vh 2vw;
+
+}
+header {
+	border-bottom : 3px solid black;
+	margin-bottom: 5vh;
+    font-size: 24pt;
+    line-height: 3;
+	
+}
+
+nav {
+	margin-right:5vw;
+	display:inline-block;
+	vertical-align: top;
+}
+
+nav li {
+	line-height:2;
+	font-size: 18pt;
+}
+nav li > a:hover {
+	color:#4f81bd !important;
+}
+.on_menu > a{
+	color:#4f81bd;
+}
+section {
+	display:inline-block;
+}
+section  h2 {
+	margin-bottom: 20px;
+	font-size:18pt;
+}
+article {
+	display:inline-block;
+}
+.item {
+	line-height:2;
+	display:flex;
+	margin:10px;
+}
+.item > label {
+	width:100px;
+
+}
+.form_box input{
+	display:flex;
+	
+}
+.alert {
+	margin-left:10px;
+	color:red;
+}
