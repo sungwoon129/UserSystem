@@ -5,6 +5,7 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import kr.co.otree.dao.MemberDao;
 import kr.co.otree.model.Member;
@@ -26,7 +27,7 @@ public class MemberServiceImpl implements MemberService {
 		return dao.registMember(member);
 	}
 
-
+	@Transactional
 	@Override
 	public List<Member> getList(Pager pager) {
 		int total = dao.getTotal(pager);
