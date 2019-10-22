@@ -37,7 +37,7 @@ public class RootController {
 	@RequestMapping(value="/isExist",method=RequestMethod.GET)
 	@ResponseBody
 	public int isExist(String inputType,String inputValue) {
-		System.out.println(service.isExist(inputType,inputValue));
+
 		return service.isExist(inputType,inputValue);
 	}
 	
