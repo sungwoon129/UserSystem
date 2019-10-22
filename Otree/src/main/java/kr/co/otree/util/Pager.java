@@ -1,5 +1,6 @@
 package kr.co.otree.util;
 
+import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
 
 public class Pager {
@@ -11,7 +12,7 @@ public class Pager {
 	String search;
 	String keyword = "";
 	
-	public String getPagination() {
+	public String getPagination() throws UnsupportedEncodingException {
 		String html;
 		int maxPage = 1;
 		int startPage =1;
@@ -19,7 +20,7 @@ public class Pager {
 		
 		String searchSQL = "";
 		
-		keyword = URLEncoder.encode(keyword);
+		keyword = URLEncoder.encode(keyword,java.nio.charset.StandardCharsets.UTF_8.toString());
 		
 		if(searchMode != null && keyword != null)
 			searchSQL = "searchMode=" + searchMode + "&keyword=" + keyword + "&";		
