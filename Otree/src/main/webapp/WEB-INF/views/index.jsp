@@ -9,7 +9,7 @@
 </head>
 <body>
 <div id="wrapper">
-	<header>Otree_회원정보</header>
+	<header>Otree_회원관리 시스템</header>
 	<nav>
 		<ul>
 			<li class="on_menu"><a href="/">회원 가입</a></li>

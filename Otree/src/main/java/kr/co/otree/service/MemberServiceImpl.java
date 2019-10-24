@@ -27,7 +27,7 @@ public class MemberServiceImpl implements MemberService {
 		return dao.registMember(member);
 	}
 
-	@Transactional
+
 	@Override
 	public List<Member> getList(Pager pager) {
 		int total = dao.getTotal(pager);

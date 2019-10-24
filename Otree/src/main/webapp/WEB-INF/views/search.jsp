@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Otree_회원정보</title>
+	<title>Otree_회원관리 시스템</title>
 	<link rel="stylesheet" href="/resources/css/default.css" >
 	<link rel="stylesheet" href="/resources/css/search.css">
 	
@@ -64,7 +64,7 @@
 					</c:when>
 					<c:otherwise>
 						<tr>
-							<td>가입한 회원이 없습니다.</td>
+							<td colspan="6">가입한 회원이 없습니다.</td>
 						</tr>
 					</c:otherwise>
 				</c:choose>
